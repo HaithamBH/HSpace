@@ -1,0 +1,191 @@
+$navColor : #222831 ;
+$bgColor :#DDDDDD;
+
+.nav{
+    z-index: 1;
+    display: block;
+    background-color: $navColor ;
+    position: fixed;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+
+    &-left{
+        display: flex;
+        align-items: center;
+
+        &-logo{
+            height: 40px;
+            margin: 0 50px 0 50px ;
+        }
+        &-list {
+            
+            list-style: none;
+            display: flex;
+
+            &-item{
+                margin: 0 35px 0 35px ;
+                cursor: pointer;
+                & img{
+                    height: 25px;
+                }
+            }
+        }
+    }
+
+    &-right{
+        display: flex;
+        align-items: center;
+
+        &-icon{
+            margin: 0 50px 0 50px ;
+            position: relative;
+
+            &::after{
+                content: '';
+                width: 7px;
+                height: 7px;
+                border: 2px solid #ffff;
+                border-radius: 50%;
+                background: #41db51;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            & img{
+                height: 35px;
+                width: 35px;
+                border-radius: 50%;
+                cursor: pointer;
+            }   
+        }
+        &-searchBox{
+            display: flex;
+
+            &-btn {
+                background-color: $bgColor;
+                outline: none;
+                border: none;
+                padding: 7px;
+                padding-left: 12px;
+                border-top-left-radius: 50px;
+                border-bottom-left-radius: 50px;
+
+                & img {
+                    height: 15px;
+                }
+            }
+
+            & input{
+                border: none;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+                background-color: $bgColor;
+                width: 250px;
+                outline: none;
+            }
+        }
+    }
+    &-settingMenu{
+        position: absolute;
+        width: 90%;
+        max-width: 350px;
+        background: #DDDDDD;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        border-radius: 4px;
+        overflow: hidden;
+        top: 108%;
+        right: 5%;
+        max-height: 0;
+        transition: max-height 0.3s;
+
+        &-height{
+            max-height: 450px;
+        }
+
+        & hr {
+            border: 0;
+            height: 1px;
+            background: #9a9a9a;
+            margin: 15px 0;
+        }
+
+        &-inner{
+            padding: 20px;
+
+            &-userProfile{
+                font-size: 12px;
+                color: #1876f2;
+                text-decoration: none;
+                display: flex;
+
+                & div{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                   
+                }
+                & img{
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50px;
+                    margin: 15px;
+                }
+            }
+
+            &-links{
+                display: flex;
+                align-items: center;
+
+                &-settings-icon{
+                    width: 38px;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                }
+
+                & a {
+                    display: flex;
+                    flex: 1;
+                    align-items: center;
+                    justify-content: space-between;
+                    text-decoration: none;
+                    color: #626262;
+                    & img{
+                        position: relative;
+                        top: 3px;
+                    }
+                }
+            }
+        }
+
+        &-darkbtn{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #ccc;
+            width: 45px;
+            border-radius: 15px;
+            padding: 2px 3px;
+            cursor: pointer;
+            transition: padding-left 0.5s, background 0.5s;
+
+            & span{
+                width: 18px;
+                height: 18px;
+                background: #fff;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            &.darksbtn-on{
+                padding-left: 23px;
+                background: #000;
+            }
+        }
+    }
+   
+}

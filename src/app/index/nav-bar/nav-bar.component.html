@@ -1,0 +1,60 @@
+<nav class="nav">
+    <div class="nav-left">
+        <img src="assets/HSpaceWhite.png" class="nav-left-logo">
+        <ul class="nav-left-list">
+            <li class="nav-left-list-item"><img src="assets/notification.png" ></li>
+            <li class="nav-left-list-item"><img src="assets/inbox.png"></li>
+            <li class="nav-left-list-item"><img src="assets/video.png"></li>
+        </ul>
+    </div>
+    <div class="nav-right">
+        <div class="nav-right-searchBox">
+            <button class="nav-right-searchBox-btn "><img src="assets/search.png"></button>
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="nav-right-icon online" (click)="settingsMenuToggle()" >
+            <img src="assets/hamzaprofile.jpg">
+        </div>
+
+    </div>
+    <!---------------------- settings-menu----------- --> 
+    <div class="nav-settingMenu" [ngClass]="{'nav-settingMenu-height' : OpenSettings}">
+        <div id="nav-settingMenu-darkbtn">
+            <span></span>
+        </div>
+        <div class="nav-settingMenu-inner">
+            <div class="nav-settingMenu-inner-userProfile">
+                <img src="assets/hamzaprofile.jpg">
+                <div>
+                    <p>Hamza Ben Hamouda</p>
+                    <div><a href="#">See your profile</a></div>
+                </div>
+            </div>
+            <hr>
+            <div class="nav-settingMenu-inner-userProfile">
+                <img src="assets/feedback.png">
+                <div>
+                    <p>Give Feedback</p>
+                    <div><a href="#">Help us to improve the new design</a></div>
+                </div>
+            </div>
+            <hr>
+            <div class="nav-settingMenu-inner-links">
+                <img src="assets/setting.png" class="nav-settingMenu-inner-links-settings-icon">
+                <a href="#">Settings & Privacy <img src="assets/arrow.png" width="10px"></a>
+            </div>
+            <div class="nav-settingMenu-inner-links">
+                <img class="nav-settingMenu-inner-links-settings-icon" src="assets/help.png" >
+                <a href="#">Help & Support <img src="assets/arrow.png" width="10px"></a>
+            </div>
+            <div class="nav-settingMenu-inner-links">
+                <img class="nav-settingMenu-inner-links-settings-icon" src="assets/display.png" >
+                <a href="#">Display & Accessibility <img src="assets/arrow.png" width="10px"></a>
+            </div>
+            <div class="nav-settingMenu-inner-links">
+                <img src="assets/logout.png" class="nav-settingMenu-inner-links-settings-icon">
+                <a href="#">Logout <img src="assets/arrow.png" width="10px"></a>
+            </div>
+        </div>
+    </div>   
+</nav>
